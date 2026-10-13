@@ -1,15 +1,8 @@
 (() => {
   "use strict";
 
-  // WhatsApp: número no formato internacional, sem "+" e sem espaços (+55 61 91141-1108)
-  const WA_NUMBER = "556191141108";
-  const MESSAGES = {
-    geral: "Olá! Conheci a Hype Infinity pelo site e gostaria de solicitar um orçamento para um projeto personalizado.",
-    sistemas: "Olá! Conheci a Hype Infinity pelo site e gostaria de consultar um orçamento para desenvolvimento de um sistema.",
-    mods: "Olá! Gostaria de saber mais sobre os serviços de mods para jogos da Hype Infinity.",
-    plugins: "Olá! Gostaria de consultar a possibilidade de desenvolver um plugin para meu projeto.",
-    produtos: "Olá! Gostaria de consultar a disponibilidade e as informações dos produtos da Hype Infinity."
-  };
+  // Dados vêm de js/config.js (carregado antes deste arquivo)
+  const { number: WA_NUMBER, messages: MESSAGES } = window.HYPE_CONFIG.whatsapp;
 
   // Monta os links do WhatsApp. O visitante revisa e envia a mensagem no próprio app.
   document.querySelectorAll("[data-wa]").forEach((el) => {

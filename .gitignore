@@ -1,0 +1,7 @@
+# Nunca versionar segredos ou arquivos de sistema
+.env
+.env.*
+.vercel
+.DS_Store
+Thumbs.db
+node_modules/
