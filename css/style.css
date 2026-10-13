@@ -48,10 +48,8 @@ p{margin:0 0 1em}
 .hero__in{display:grid;gap:32px;align-items:center}
 .hero__text{max-width:560px}
 .hero__text p{color:var(--muted);font-size:1.08rem;margin-bottom:1.8em}
-.hero__art{width:100%;max-width:560px;justify-self:center;overflow:visible}
-.loop{fill:none;stroke:url(#g);stroke-width:14;stroke-linecap:round;stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 2.6s .2s cubic-bezier(.6,0,.2,1) forwards}
-.loop--glow{stroke-width:26;opacity:.28;filter:blur(10px)}
-@keyframes draw{to{stroke-dashoffset:0}}
+.hero__art{width:100%;max-width:560px;height:auto;justify-self:center;filter:drop-shadow(0 0 40px rgba(212,175,55,.25));animation:fadein 1.2s .1s ease-out both}
+@keyframes fadein{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
 
 /* Seções */
 .sec{padding:clamp(56px,8vw,96px) 0}
@@ -124,5 +122,4 @@ p{margin:0 0 1em}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
-  .loop{stroke-dashoffset:0}
 }

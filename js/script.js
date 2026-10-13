@@ -43,7 +43,10 @@
   document.getElementById("ano").textContent = new Date().getFullYear();
 
   // Se assets/logo.png ainda não existir, esconde a imagem e mantém o nome em texto
+  // (também verifica imagens que já falharam antes deste script rodar)
   document.querySelectorAll(".brand img").forEach((img) => {
-    img.addEventListener("error", () => { img.hidden = true; });
+    const hide = () => { img.hidden = true; };
+    img.addEventListener("error", hide);
+    if (img.complete && img.naturalWidth === 0) hide();
   });
 })();
