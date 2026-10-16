@@ -23,7 +23,7 @@ export async function signUp(fd: FormData) {
     options: {
       emailRedirectTo: `${env("SITE_URL")}/auth/confirm`,
       data: { 
-        full_name: d.full_name, 
+        fullName: d.fullName, 
         phone: d.phone, 
         age_declared: true, 
         info_true: true, 
