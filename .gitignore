@@ -1,7 +1,10 @@
-# Nunca versionar segredos ou arquivos de sistema
 .env
 .env.*
+!.env.example
 .vercel
+.next/
+node_modules/
+*.tsbuildinfo
+next-env.d.ts
 .DS_Store
 Thumbs.db
-node_modules/
